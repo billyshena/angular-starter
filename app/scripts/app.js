@@ -28,6 +28,15 @@ angular
         controller: function() {
           return console.log('Landing route');
         }
+      })
+      .state('login', {
+        url: '/login',
+        views: {
+          'theContent@': {
+            controller: 'LoginCtrl',
+            templateUrl: 'views/login.html'
+          }
+        }
       });
 
   });

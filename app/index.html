@@ -13,26 +13,10 @@
     <!-- endbuild -->
   </head>
   <body ng-app="flppnApp">
-    <!--[if lt IE 7]>
-    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-
-
 
     <!-- Include page according to the state -->
-    <div id="app" ui-view="" class="animated fadeIn"></div>
+    <div id="app" ui-view="theContent" class="animated fadeIn"></div>
 
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-     <script>
-       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
-       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
-       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
-       }(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');
-    </script>
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
@@ -48,6 +32,7 @@
     <script src="scripts/controllers/main.js"></script>
     <script src="scripts/interceptors/AuthInterceptor.js"></script>
     <script src="scripts/services/StorageService.js"></script>
+    <script src="scripts/controllers/login.js"></script>
     <!-- endbuild -->
 </body>
 </html>
