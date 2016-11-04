@@ -8,7 +8,6 @@
  * Controller of the flppnApp
  */
 angular.module('flppnApp')
-  .controller('MainCtrl', function ($scope) {
-    console.log('MainCtrl');
-
+  .controller('NavigationCtrl', function ($scope) {
+    console.log('NavigationCtrl');
   });

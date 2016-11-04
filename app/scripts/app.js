@@ -23,11 +23,35 @@ angular
     console.log('$stateProvider', $stateProvider);
 
     $stateProvider
-      .state('landing', {
+      .state('app', {
+        abstract: true,
+        views : {
+          'theHeader@': {
+            templateUrl: 'views/header.html',
+            controller: 'HeaderCtrl'
+          },
+          'theNav@': {
+            templateUrl: 'views/navigation.html',
+            controller: 'NavigationCtrl'
+          }
+        }
+      })
+      .state('app.home', {
         url: '/',
-        templateUrl: 'views/main.html',
-        controller: function() {
-          return console.log('Landing route');
+        views: {
+          'theContent@': {
+            controller: 'HomeCtrl',
+            templateUrl: 'views/home.html'
+          }
+        }
+      })
+      .state('login', {
+        url: '/login',
+        views: {
+          'theContent@': {
+            controller: 'LoginCtrl',
+            templateUrl: 'views/login.html'
+          }
         }
       });
 
