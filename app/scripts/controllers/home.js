@@ -4,11 +4,10 @@
  * @ngdoc function
  * @name flppnApp.controller:MainCtrl
  * @description
- * # MainCtrl
+ * # LoginCtrl
  * Controller of the flppnApp
  */
 angular.module('flppnApp')
-  .controller('MainCtrl', function ($scope) {
-    console.log('MainCtrl');
-
-  });
+  .controller('HomeCtrl', function ($scope, $state) {
+    console.log('HomeCtrl');
+});

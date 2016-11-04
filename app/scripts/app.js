@@ -23,10 +23,13 @@ angular
     console.log('$stateProvider', $stateProvider);
 
     $stateProvider
-      .state('landing', {
+      .state('home', {
         url: '/',
-        controller: function() {
-          return console.log('Landing route');
+        views: {
+          'theContent@': {
+            controller: 'HomeCtrl',
+            templateUrl: 'views/home.html'
+          }
         }
       })
       .state('login', {

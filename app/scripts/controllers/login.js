@@ -8,6 +8,10 @@
  * Controller of the flppnApp
  */
 angular.module('flppnApp')
-  .controller('LoginCtrl', function ($scope) {
+  .controller('LoginCtrl', function ($scope, $state) {
+
+  $scope.login = function() {
+    $state.go('home');
+  }
 
 });
