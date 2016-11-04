@@ -10,4 +10,8 @@
 angular.module('flppnApp')
   .controller('HeaderCtrl', function ($scope, $state) {
     console.log('HeaderCtrl');
+
+    $scope.logout = function() {
+      $state.go('login');
+    }
 });

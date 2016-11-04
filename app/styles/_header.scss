@@ -16,4 +16,17 @@
   font-size: 2.4rem;
   line-height: 26px;
   padding-left:25px;
+  float:left;
+}
+
+
+.btn-logout {
+  border:1px solid rgba(0, 0, 0, 0.2);
+  padding: 8px 15px;
+  float:right;
+  color: rgba(0, 0, 0, 0.4);
+  margin: 12px 30px;
+  cursor: pointer;
+  border-radius: 30px;
+  font-size: 1.2rem;
 }

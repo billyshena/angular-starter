@@ -11,7 +11,7 @@ angular.module('flppnApp')
   .controller('LoginCtrl', function ($scope, $state) {
 
   $scope.login = function() {
-    $state.go('home');
+    $state.go('app.home');
   }
 
 });
