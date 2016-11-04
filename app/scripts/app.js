@@ -23,7 +23,20 @@ angular
     console.log('$stateProvider', $stateProvider);
 
     $stateProvider
-      .state('home', {
+      .state('app', {
+        abstract: true,
+        views : {
+          'theHeader@': {
+            templateUrl: 'views/header.html',
+            controller: 'HeaderCtrl'
+          },
+          'theNav@': {
+            templateUrl: 'views/navigation.html',
+            controller: 'NavigationCtrl'
+          }
+        }
+      })
+      .state('app.home', {
         url: '/',
         views: {
           'theContent@': {
