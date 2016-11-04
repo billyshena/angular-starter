@@ -25,6 +25,7 @@ angular
     $stateProvider
       .state('landing', {
         url: '/',
+        templateUrl: 'views/main.html',
         controller: function() {
           return console.log('Landing route');
         }
