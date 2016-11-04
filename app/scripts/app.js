@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name flppnApp
+ * @name airliquideApp
  * @description
- * # flppnApp
+ * # airliquideApp
  *
  * Main module of the application.
  */
 angular
-  .module('flppnApp', [
+  .module('airliquideApp', [
     'ui.router'
   ])
   .config(function($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider) {

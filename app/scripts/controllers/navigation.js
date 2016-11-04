@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name flppnApp.controller:MainCtrl
+ * @name airliquideApp.controller:MainCtrl
  * @description
  * # MainCtrl
- * Controller of the flppnApp
+ * Controller of the airliquideApp
  */
-angular.module('flppnApp')
+angular.module('airliquideApp')
   .controller('NavigationCtrl', function ($scope) {
     console.log('NavigationCtrl');
   });

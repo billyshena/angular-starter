@@ -20,7 +20,7 @@
  */
 'use strict';
 
-angular.module('flppnApp')
+angular.module('airliquideApp')
   .factory('AuthInterceptor',
   [
     '$q', '$injector', 'Storage',

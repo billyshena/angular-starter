@@ -6,7 +6,7 @@
 
 'use strict';
 
-angular.module('flppnApp')
+angular.module('airliquideApp')
 .factory('Storage', function () {
     return {
         get: function (key) {
