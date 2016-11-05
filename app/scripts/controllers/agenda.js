@@ -52,15 +52,16 @@ angular.module('airliquideApp')
 
       // Push new event on the calendar
       modalInstance.result.then(function(data) {
-        console.log('data', data);
         if(!data.selected) {
           return;
         }
         var random = Math.floor(Math.random() * $scope.colors.length) + 0;
+        console.log('data', data);
         $scope.events.push({
           title: data.selected.name,
           start: date.format(),
           hasKalinox: data.hasKalinox,
+          pathology: data.pathology.label,
           color: $scope.colors[random]
         });
       });
@@ -92,15 +93,20 @@ angular.module('airliquideApp')
             eventClick: $scope.alertOnEventClick,
             dayClick: $scope.dayClick,
             viewRender: function (view) {
-                if(!isLoading) {
-                    setTimeline();
-                }
+              if(!isLoading) {
+                  setTimeline();
+              }
             },
             eventRender: function (event, element, view) {
-              if(event.hasKalinox) {
-                event.title += '<br><p>Kalinox</p>';
-                element.find('.fc-title').html(event.title);
+              if(event.pathology) {
+                event.title += '<br><p>' + event.pathology + '</p>';
               }
+              if(event.hasKalinox) {
+                event.title += '<p style="font-size:1.2rem;">+ Anti-douleur</p>';
+                console.log('event', event);
+              }
+              element.find('.fc-title').html(event.title);
+
               var random = Math.floor(Math.random() * $scope.colors.length) + 0;
               element.addClass(event.color);
             }

@@ -11,7 +11,7 @@
           <ui-select-choices repeat="person in patients | propsFilter: {name: $select.search, age: $select.search}">
             <div ng-bind-html="person.name | highlight: $select.search"></div>
             <small>
-              âge: <span ng-bind-html="''+person.age | highlight: $select.search"></span>
+              age: <span ng-bind-html="''+person.age | highlight: $select.search"></span>
             </small>
           </ui-select-choices>
         </ui-select>
@@ -19,7 +19,7 @@
       <div class="form-group">
         <label>Pathologie</label>
         <select
-                ng-init="pathology = pathologies[0]" 
+                ng-init="pathology = pathologies[0]"
                 class="select-form"
                 ng-model="pathology"
                 ng-options="p as p.label for p in pathologies">
@@ -35,7 +35,7 @@
           <input type="checkbox"
                  placeholder="Rechercher..."
                  data-ng-model="patient.hasKalinox">
-           <span>Ce patient souhaite utiliser un anti-douleur</span>
+           <span style="font-weight: 500; color: rgba(0, 0, 0, 0.8)">Ce patient souhaite utiliser un anti-douleur</span>
         </div>
       </div>
     </div>

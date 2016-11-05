@@ -34,17 +34,13 @@ angular.module('airliquideApp')
       $uibModalInstance.dismiss();
     }
 
-
     function loadPatients() {
       $http.get('/data/patients.json').then(function(response) {
         $scope.patients = response.data.patients;
       });
     }
 
-
     loadPatients();
-
-
 
 })
 .filter('propsFilter', function() {
