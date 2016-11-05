@@ -8,7 +8,7 @@
  * Controller of the airliquideApp
  */
 angular.module('airliquideApp')
-  .controller('AgendaCtrl', function ($scope, $state) {
+  .controller('AgendaCtrl', function ($scope, $state, $uibModal) {
 
 
     // Date configuration variables
@@ -42,6 +42,20 @@ angular.module('airliquideApp')
       console.log('onClick', date, jsEvent, view )
     }
 
+
+    $scope.dayClick = function(date, jsEvent, view) {
+      console.log('clicked on ', date.format());
+      var modalInstance = $uibModal.open({
+        animation: true,
+        templateUrl: '/views/create-event-modal.html',
+        controller: 'EventCtrl'
+      });
+
+      modalInstance.result.then(function(data) {
+        console.log('data', data);
+      })
+    }
+
     // FULLCALENDAR CONFIG
     $scope.uiConfig = {
         calendar:{
@@ -67,13 +81,11 @@ angular.module('airliquideApp')
                 right: 'next'
             },
             eventClick: $scope.alertOnEventClick,
+            dayClick: $scope.dayClick,
             viewRender: function (view) {
                 if(!isLoading) {
                     setTimeline();
                 }
-            },
-            viewDisplay: function(view) {
-                //setTimeline();
             },
             eventRender: function (event, element, view) {
               var random = Math.floor(Math.random() * $scope.colors.length) + 0;

@@ -1,0 +1,23 @@
+<div class="create-event">
+  <div class="modal-header">
+    <h1> Nouveau rendez-vous </h1>
+  </div>
+  <form action="javascript:;" data-ng-submit="add()">
+    <div class="modal-body">
+      <div class="form-group add-patient">
+        <label for="group_name" class="ng-binding">Nom du patient</label>
+        <input type="text"
+               class="form-control"
+               placeholder="Rechercher..."
+               data-ng-model="patient.name">
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p class="text-center">
+          <button class="btn btn-success ng-binding" type="submit">Ajouter</button>
+          <button class="btn btn-cancel" type="button" data-ng-click="close()">Annuler</button>
+      </p>
+    </div>
+  </form>
+
+</div>
