@@ -10,7 +10,8 @@
  */
 angular
   .module('airliquideApp', [
-    'ui.router'
+    'ui.router',
+    'ui.calendar'
   ])
   .config(function($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider) {
 

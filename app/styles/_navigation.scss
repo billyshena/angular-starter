@@ -1,4 +1,5 @@
-$nav-white: rgba(255, 255, 255, 0.8);
+$nav-white: rgba(255, 255, 255, 0.6);
+$nav-white-hover: rgba(255, 255, 255, 0.9);
 
 .navbar {
   overflow: hidden;
@@ -29,6 +30,15 @@ $nav-white: rgba(255, 255, 255, 0.8);
       border-bottom-left-radius: 3px;
       background-color: rgba(0,0,0,.10);
     }
+    &.active {
+      a {
+        background:rgba(0,0,0,.10);
+        color: $nav-white-hover;
+      }
+      svg{
+        fill: $nav-white-hover;
+      }
+    }
     a {
       text-decoration: none;
       color: $nav-white;
@@ -37,6 +47,7 @@ $nav-white: rgba(255, 255, 255, 0.8);
       display: block;
       padding: 12px 10px;
       font-size: 1.5rem;
+      border-radius:3px;
 
       svg{
         vertical-align: middle;
