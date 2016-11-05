@@ -8,11 +8,16 @@
  * Controller of the airliquideApp
  */
 angular.module('airliquideApp')
-  .controller('EventCtrl', function ($scope, $state, $uibModalInstance) {
+  .controller('EventCtrl', function ($scope, $state, $uibModalInstance, $http) {
     console.log('EventCtrl');
-    $scope.patient = {};
+
+    $scope.patients = [];
+    $scope.patient = {
+      selected: null
+    };
 
     $scope.add = function() {
+      console.log('patient', $scope.patient);
       $uibModalInstance.close($scope.patient);
     }
 
@@ -21,18 +26,15 @@ angular.module('airliquideApp')
     }
 
 
-    $scope.people = [
-    { name: 'Adam',      email: 'adam@email.com',      age: 12, country: 'United States' },
-    { name: 'Amalie',    email: 'amalie@email.com',    age: 12, country: 'Argentina' },
-    { name: 'Estefanía', email: 'estefania@email.com', age: 21, country: 'Argentina' },
-    { name: 'Adrian',    email: 'adrian@email.com',    age: 21, country: 'Ecuador' },
-    { name: 'Wladimir',  email: 'wladimir@email.com',  age: 30, country: 'Ecuador' },
-    { name: 'Samantha',  email: 'samantha@email.com',  age: 30, country: 'United States' },
-    { name: 'Nicole',    email: 'nicole@email.com',    age: 43, country: 'Colombia' },
-    { name: 'Natasha',   email: 'natasha@email.com',   age: 54, country: 'Ecuador' },
-    { name: 'Michael',   email: 'michael@email.com',   age: 15, country: 'Colombia' },
-    { name: 'Nicolás',   email: 'nicolas@email.com',    age: 43, country: 'Colombia' }
-    ];
+    function loadPatients() {
+      $http.get('/data/patients.json').then(function(response) {
+        $scope.patients = response.data.patients;
+      });
+    }
+
+
+    loadPatients();
+
 
 
 })

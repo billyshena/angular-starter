@@ -1,0 +1,36 @@
+{
+  "patients": [
+    {
+      "name": "Adam Smith",
+      "age": 12
+    },
+    {
+      "name": "Julie Deschamps",
+      "age": 36
+    },
+    {
+      "name": "Pierre Alons",
+      "age": 23
+    },
+    {
+      "name": "Marie Laos",
+      "age": 55
+    },
+    {
+      "name": "Éric Dams",
+      "age": 44
+    },
+    {
+      "name": "Philippe Nominé",
+      "age": 27
+    },
+    {
+      "name": "Alice Pia",
+      "age": 9
+    },
+    {
+      "name": "Élise bath",
+      "age": 17
+    }
+  ]
+}

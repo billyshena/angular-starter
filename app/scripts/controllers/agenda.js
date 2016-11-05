@@ -44,7 +44,6 @@ angular.module('airliquideApp')
 
 
     $scope.dayClick = function(date, jsEvent, view) {
-      console.log('clicked on ', date.format());
       var modalInstance = $uibModal.open({
         animation: true,
         templateUrl: '/views/create-event-modal.html',
@@ -53,10 +52,15 @@ angular.module('airliquideApp')
 
       // Push new event on the calendar
       modalInstance.result.then(function(data) {
+        if(!data.selected) {
+          return;
+        }
+        var random = Math.floor(Math.random() * $scope.colors.length) + 0;
         $scope.events.push({
-          title: data.name,
+          title: data.selected.name,
           start: date.format(),
-          hasKalinox: data.hasKalinox
+          hasKalinox: data.hasKalinox,
+          color: $scope.colors[random]
         });
       });
     }
