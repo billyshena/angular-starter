@@ -20,7 +20,6 @@ angular.module('airliquideApp')
     $scope.colors = ["fc-event-purple", "fc-event-green", "fc-event-cyan", "fc-event-orange", "fc-event-red", "fc-event-black"];
 
 
-
     // Default events
     $scope.events = [
       {id: 1, title: 'Arnaud lemaire', start: new Date(y, m, d - 3, 16, 0), allDay: false, color: "fc-event-purple" },
@@ -39,6 +38,10 @@ angular.module('airliquideApp')
     $scope.eventSources = [$scope.events];
 
 
+    $scope.alertOnEventClick = function(date, jsEvent, view) {
+      console.log('onClick', date, jsEvent, view )
+    }
+
     // FULLCALENDAR CONFIG
     $scope.uiConfig = {
         calendar:{
@@ -52,7 +55,7 @@ angular.module('airliquideApp')
             minTime: '08:00:00',
             maxTime: '22:00:00',
             firstDay: 1,
-            editable: false,
+            editable: true,
             axisFormat: 'HH:mm',
             timeFormat: {
                 '': 'HH:mm',
@@ -63,6 +66,7 @@ angular.module('airliquideApp')
                 center: 'title',
                 right: 'next'
             },
+            eventClick: $scope.alertOnEventClick,
             viewRender: function (view) {
                 if(!isLoading) {
                     setTimeline();
