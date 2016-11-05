@@ -11,6 +11,15 @@
                placeholder="Rechercher..."
                data-ng-model="patient.name">
       </div>
+      <div class="form-group">
+        <label for="group_name" class="ng-binding">Options</label>
+        <div class="options">
+          <input type="checkbox"
+                 placeholder="Rechercher..."
+                 data-ng-model="patient.hasKalinox">
+           <span>Ce patient souhaite utiliser la kalinox</span>
+        </div>
+      </div>
     </div>
     <div class="modal-footer">
       <p class="text-center">

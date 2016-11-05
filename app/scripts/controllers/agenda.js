@@ -51,12 +51,14 @@ angular.module('airliquideApp')
         controller: 'EventCtrl'
       });
 
+      // Push new event on the calendar
       modalInstance.result.then(function(data) {
         $scope.events.push({
           title: data.name,
-          start: date.format()
+          start: date.format(),
+          hasKalinox: data.hasKalinox
         });
-      })
+      });
     }
 
     // FULLCALENDAR CONFIG
@@ -67,7 +69,6 @@ angular.module('airliquideApp')
             defaultView: 'agendaWeek',
             aspectRatio: 4,
             timezone: 'local',
-            //hiddenDays: [0],
             scrollTime: '8:00',
             minTime: '08:00:00',
             maxTime: '22:00:00',
@@ -91,8 +92,11 @@ angular.module('airliquideApp')
                 }
             },
             eventRender: function (event, element, view) {
+              if(event.hasKalinox) {
+                event.title += '<br> <p> Kalinox </p>';
+                element.find('.fc-title').html(event.title);
+              }
               var random = Math.floor(Math.random() * $scope.colors.length) + 0;
-              element.find('.fc-title').html(event.title);
               element.addClass(event.color);
             }
         }

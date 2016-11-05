@@ -17,7 +17,7 @@
     color: rgba(0, 0, 0, 0.7);
     margin-bottom: 5px;
   }
-  input {
+  input.form-control {
     height: 45px;
     font-size: 1.6rem;
     width: 100%;
@@ -44,4 +44,10 @@
   .add-patient {
     margin:20px 0px 30px;
   }
+
+  .options {
+    margin-top: 4px;
+  }
+
+
 }

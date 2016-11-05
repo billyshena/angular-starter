@@ -15,4 +15,8 @@ angular.module('airliquideApp')
     $scope.add = function() {
       $uibModalInstance.close($scope.patient);
     }
+
+    $scope.close = function() {
+      $uibModalInstance.dismiss();
+    }
 });
