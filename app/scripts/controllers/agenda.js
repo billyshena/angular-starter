@@ -22,14 +22,14 @@ angular.module('airliquideApp')
 
     // Default events
     $scope.events = [
-      {id: 1, title: 'Arnaud Lemaire', start: new Date(y, m, d - 3, 16, 0), allDay: false, color: "fc-event-purple" },
-      {id: 4, title: 'Julie Moreaux', start: new Date(y, m, d - 2, 8, 0), allDay: false, color: "fc-event-green" },
+      {id: 1, title: 'Arnaud Lemaire', start: new Date(y, m, d - 3, 16, 0), allDay: false, color: "fc-event-purple", pathology: 'Consultation dentaire' },
+      {id: 4, title: 'Julie Moreaux', start: new Date(y, m, d - 2, 8, 0), allDay: false, color: "fc-event-green", pathology: 'Blanchiment des dents' },
       {id: 5, title: 'Amélie Schwartz', start: new Date(y, m, d - 2, 11, 0), allDay: false, color: "fc-event-cyan" },
       {id: 6, title: 'Anthony Certeux', start: new Date(y, m, d - 3, 8, 0), allDay: false, color: "fc-event-red" },
       {id: 7, title: 'Lucie Schneider', start: new Date(y, m, d - 4, 14, 0), end: new Date(y, m, d - 4, 18, 0), allDay: false, color: "fc-event-orange" },
       {id: 8, title: 'Marc Ober', start: new Date(y, m, d - 5, 10, 0), allDay: false, color: "fc-event-green" },
-      {id: 9, title: 'Antoine Chrétien', start: new Date(y, m, d - 1, 10, 0), end: new Date(y, m, d - 1, 14, 0), allDay: false, color: "fc-event-black" },
-      {id: 10, title: 'Léa Altabal', start: new Date(y, m, d - 5, 18, 0), end: new Date(y, m, d - 5, 20, 0), allDay: false, color: "fc-event-cyan" },
+      {id: 9, title: 'Antoine Chrétien', start: new Date(y, m, d - 1, 10, 0), end: new Date(y, m, d - 1, 14, 0), allDay: false, color: "fc-event-black", pathology: "Urgence dentaire" },
+      {id: 10, title: 'Léa Altabal', start: new Date(y, m, d - 5, 18, 0), end: new Date(y, m, d - 5, 20, 0), allDay: false, color: "fc-event-cyan", pathology: "Détartrage" },
       {id: 11, title: 'Stéphane Padowski', start: new Date(y, m, d, 15, 0), end: new Date(y, m, d, 19, 0), allDay: false, color: "fc-event-red" }
     ]
 
