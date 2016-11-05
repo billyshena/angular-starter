@@ -9,5 +9,68 @@
  */
 angular.module('airliquideApp')
   .controller('AgendaCtrl', function ($scope, $state) {
-    console.log('AgendaCtrl');
+
+
+    // Date configuration variables
+    var date = new Date();
+    var d = date.getDate();
+    var m = date.getMonth();
+    var y = date.getFullYear();
+    var isLoading = true;
+    $scope.colors = ["fc-event-purple", "fc-event-green", "fc-event-cyan", "fc-event-orange", "fc-event-red"];
+
+
+
+    // Default events
+    $scope.events = [
+      {title: 'All Day Event',start: new Date(y, m, 1)},
+      {title: 'Long Event',start: new Date(y, m, d - 5),end: new Date(y, m, d - 2)},
+      {id: 999,title: 'Repeating Event',start: new Date(y, m, d - 3, 16, 0),allDay: false},
+      {id: 999,title: 'Repeating Event',start: new Date(y, m, d + 4, 16, 0),allDay: false},
+      {title: 'Birthday Party',start: new Date(y, m, d + 1, 19, 0),end: new Date(y, m, d + 1, 22, 30),allDay: false},
+      {title: 'Click for Google',start: new Date(y, m, 28),end: new Date(y, m, 29),url: 'http://google.com/'}
+    ]
+
+
+    // Source events
+    $scope.eventSources = [$scope.events];
+
+
+    // FULLCALENDAR CONFIG
+    $scope.uiConfig = {
+        calendar:{
+            lang: 'fr',
+            contentHeight: $(window).height() - 170,
+            defaultView: 'agendaWeek',
+            aspectRatio: 4,
+            timezone: 'local',
+            //hiddenDays: [0],
+            scrollTime: '8:00',
+            firstDay: 1,
+            editable: false,
+            axisFormat: 'HH:mm',
+            timeFormat: {
+                '': 'HH:mm',
+                agenda: 'HH:mm'
+            },
+            header:{
+                left: 'prev',
+                center: 'title',
+                right: 'next'
+            },
+            viewRender: function (view) {
+                if(!isLoading) {
+                    setTimeline();
+                }
+            },
+            viewDisplay: function(view) {
+                //setTimeline();
+            },
+            eventRender: function (event, element, view) {
+              var random = Math.floor(Math.random() * $scope.colors.length) + 0;
+              console.log('random', random);
+              element.addClass($scope.colors[random]);
+            }
+        }
+    };
 });
