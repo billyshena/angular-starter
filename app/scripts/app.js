@@ -53,6 +53,15 @@ angular
             templateUrl: 'views/login.html'
           }
         }
+      })
+      .state('app.agenda', {
+        url: '/agenda',
+        views: {
+          'theContent@': {
+            controller: 'AgendaCtrl',
+            templateUrl: 'views/agenda.html'
+          }
+        }
       });
 
   });

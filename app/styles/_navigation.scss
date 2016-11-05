@@ -1,7 +1,9 @@
+$nav-white: rgba(255, 255, 255, 0.8);
+
 .navbar {
   overflow: hidden;
   background: $blue;
-  width: 250px;
+  width: $nav-width;
   position: fixed;
   height: 100%;
   left: 0;
@@ -9,4 +11,39 @@
   bottom: 0;
   z-index: 10;
   padding-bottom: 50px;
+}
+
+
+.nav-logo {
+  text-align:center;
+  padding-top:50px;
+}
+
+
+.nav-menu {
+  padding-left: 10px;
+  margin-top:40px;
+  li {
+    &:hover {
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+      background-color: rgba(0,0,0,.10);
+    }
+    a {
+      text-decoration: none;
+      color: $nav-white;
+      line-height: 18px;
+      font-weight: 300;
+      display: block;
+      padding: 12px 10px;
+      font-size: 1.5rem;
+
+      svg{
+        vertical-align: middle;
+        margin-top: -4px;
+        margin-right: 2px;
+        fill: $nav-white;
+      }
+    }
+  }
 }
