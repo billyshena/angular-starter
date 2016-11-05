@@ -52,7 +52,10 @@ angular.module('airliquideApp')
       });
 
       modalInstance.result.then(function(data) {
-        console.log('data', data);
+        $scope.events.push({
+          title: data.name,
+          start: date.format()
+        });
       })
     }
 
