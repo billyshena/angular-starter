@@ -19,6 +19,16 @@ $radius: 5px;
 .nav-logo {
   text-align:center;
   padding-top:50px;
+
+  h1 {
+    font-size: 7rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 300;
+    font-family: 'MyWebFont';
+    letter-spacing:2px;
+    margin-bottom:0px;
+    margin-top: 0;
+  }
 }
 
 
@@ -36,6 +46,7 @@ $radius: 5px;
       a {
         background-color:rgba(0,0,0,.15);
         color: $nav-white-hover;
+        font-weight: 500;
       }
       svg{
         fill: $nav-white-hover;

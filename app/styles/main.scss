@@ -11,6 +11,12 @@
 @import 'select.scss';
 @import 'profile.scss';
 
+
+@font-face {
+  font-family: 'MyWebFont';
+  src: url('../fonts/slack.ttf'); /* IE9 Compat Modes */
+}
+
 * {
     box-sizing: border-box;
     outline: 0 !important;
