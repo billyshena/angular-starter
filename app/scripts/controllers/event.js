@@ -15,9 +15,18 @@ angular.module('airliquideApp')
     $scope.patient = {
       selected: null
     };
+    $scope.pathologies = [
+      { label: 'Consultation dentaire' },
+      { label: 'Bilan complet' },
+      { label: 'Détartrage' },
+      { label: 'Urgence dentaire' },
+      { label: 'Blanchiment des dents' },
+      { label: 'Devis prothèse' },
+      { label: 'Devis implant(s)' }
+    ];
 
     $scope.add = function() {
-      console.log('patient', $scope.patient);
+      $scope.patient.pathology = $scope.pathology;
       $uibModalInstance.close($scope.patient);
     }
 

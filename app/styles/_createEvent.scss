@@ -13,8 +13,8 @@
   label {
     display: inline-block;
     max-width: 100%;
-    font-weight: 600;
-    color: rgba(0, 0, 0, 0.7);
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.65);
     margin-bottom: 5px;
   }
   input.form-control {
@@ -35,7 +35,7 @@
     color: rgba(255, 255, 255, 1);
   }
 
-  
+
   .btn-cancel {
     background-color: #fff;
     border: 1px solid #A2B3BF;
@@ -43,8 +43,9 @@
     padding: 12px 25px;
     font-size: 1.8rem;
   }
-  .add-patient {
-    margin:20px 0px 30px;
+
+  .form-group {
+    margin-top: 20px;
   }
 
   .options {
@@ -52,5 +53,25 @@
     margin-bottom:15px;
   }
 
+
+  select.select-form {
+    height: 42px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  .select-form {
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
 
 }
