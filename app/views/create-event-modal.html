@@ -6,10 +6,16 @@
     <div class="modal-body">
       <div class="form-group add-patient">
         <label for="group_name" class="ng-binding">Nom du patient</label>
-        <input type="text"
-               class="form-control"
-               placeholder="Rechercher..."
-               data-ng-model="patient.name">
+        <ui-select ng-model="ctrl.person.selected" theme="select2" ng-disabled="ctrl.disabled" title="Sélectionnez un patient">
+          <ui-select-match placeholder="Recherchez un patient...">{{$select.selected.name}}</ui-select-match>
+          <ui-select-choices repeat="person in people | propsFilter: {name: $select.search, age: $select.search}">
+            <div ng-bind-html="person.name | highlight: $select.search"></div>
+            <small>
+              email: {{person.email}}
+              age: <span ng-bind-html="''+person.age | highlight: $select.search"></span>
+            </small>
+          </ui-select-choices>
+        </ui-select>
       </div>
       <div class="form-group">
         <label for="group_name" class="ng-binding">Options</label>

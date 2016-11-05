@@ -10,9 +10,11 @@
  */
 angular
   .module('airliquideApp', [
+    'ngSanitize',
     'ui.router',
     'ui.calendar',
-    'ui.bootstrap'
+    'ui.bootstrap',
+    'ui.select'
   ])
   .config(function($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider) {
 
