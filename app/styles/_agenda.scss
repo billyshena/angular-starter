@@ -1,316 +1,323 @@
 .agenda {
-  padding:20px 30px;
-  h1 {
-    margin:0;
+    padding:20px 30px;
+    h1 {
+      margin:0;
+    }
+
+    #calendar-page {
+      margin-top: 13px;
+
+      #calendar {
+          margin-top: 13px;
+      }
+
+      .btn {
+          padding: 5px 13px;
+          line-height: 21px;
+      }
+
+      li.cal {
+
+          .checkbox {
+              margin-top: 4px;
+              margin-bottom: 4px;
+
+              label {
+                  padding-right: 20px;
+              }
+          }
+
+          svg {
+              position: absolute;
+              right: 0;
+              top: 4px;
+              visibility: hidden;
+          }
+      }
+
+      li.cal:hover {
+          svg {
+              visibility: visible;
+          }
+      }
   }
 
-  #calendar-page {
-    margin-top: 13px;
+  .timeline {
+      z-index: 999!important;
+      background-color: $red !important;
+      border: none!important;
+  }
 
-    #calendar {
-        margin-top: 13px;
-    }
+  .timeline:before {
+      content: ' \25CF';
+      font-size: 15px;
+      position: absolute;
+      top: -10px;
+      left: -5px;
+      color: $red;
+  }
 
-    .btn {
-        padding: 5px 13px;
-        line-height: 21px;
-    }
+  /* customize */
+  .fc-view{
+      overflow: visible;
+  }
 
-    li.cal {
+  .fc hr {
+      height: 0;
+      margin: 0;
+      padding: 0 0 2px;
+      border-style: solid;
+      border-width: 1px 0;
+  }
 
-        .checkbox {
-            margin-top: 4px;
-            margin-bottom: 4px;
+  .fc-toolbar {
+      height: 30px;
+      color: #fff;
+      background-color: #659AC3;
+      border-radius: 3px 3px 0 0;
+      margin: 0;
+      margin-bottom: 15px;
+  }
 
-            label {
-                padding-right: 20px;
-            }
-        }
+  .fc .fc-toolbar > * > :first-child {
+      line-height: 30px;
+  }
 
-        svg {
-            position: absolute;
-            right: 0;
-            top: 4px;
-            visibility: hidden;
-        }
-    }
+  .fc-month-view {
+      .fc-time {
+          display: none;
+      }
+  }
 
-    li.cal:hover {
-        svg {
-            visibility: visible;
-        }
-    }
-}
+  .fc-toolbar .fc-button {
+      color: #fff;
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      text-shadow: none;
+      margin: 0;
+      height: 30px;
+      line-height: 28px;
+      padding-top: 0;
+  }
 
-.timeline {
-    z-index: 999!important;
-    background-color: $red !important;
-    border: none!important;
-}
+  .fc-toolbar h2 {
+      font-size: 1.7rem;
+      line-height: 30px;
+      margin: 0;
+      text-transform: uppercase;
+      font-weight: 300;
+  }
 
-.timeline:before {
-    content: ' \25CF';
-    font-size: 15px;
-    position: absolute;
-    top: -10px;
-    left: -5px;
-    color: $red;
-}
+  .fc-view .fc-widget-header{
+      background-color: #fff;
+  }
 
-/* customize */
-.fc-view{
-    overflow: visible;
-}
+  .fc-row:hover,
+  .fc-row:focus,
+  .fc-row:active{
+      position: relative;
+      z-index: 1000;
+  }
 
-.fc hr {
-    height: 0;
-    margin: 0;
-    padding: 0 0 2px;
-    border-style: solid;
-    border-width: 1px 0;
-}
+  .fc-view .fc-widget-header,
+  .fc-view .fc-widget-content {
+      border-color: #e3eaef;
+      font-weight: normal;
+  }
 
-.fc-toolbar {
-    height: 30px;
-    color: #fff;
-    background-color: #659AC3;
-    border-radius: 3px 3px 0 0;
-    margin: 0;
-    margin-bottom: 15px;
-}
+  .fc-view .fc-day-header{
+      padding: 4px 4px;
+  }
 
-.fc .fc-toolbar > * > :first-child {
-    line-height: 30px;
-}
+  .fc-view .fc-event {
+      padding: 4px 8px;
+      box-shadow: 0 1px 0px rgba(0,0,0,0.05);
+      border-top: 0;
+      border-right: 0;
+      border-bottom: 0;
+      border-radius: 3px;
+      overflow: hidden;
+  }
 
-.fc-month-view {
-    .fc-time {
-        display: none;
-    }
-}
+  .fc-view  .fc-event-hori{
+      padding: 4px 8px;
+  }
 
-.fc-toolbar .fc-button {
-    color: #fff;
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    text-shadow: none;
-    margin: 0;
-    height: 30px;
-    line-height: 28px;
-    padding-top: 0;
-}
+  .fc-event {
+      -webkit-box-sizing: content-box;
+      -moz-box-sizing: content-box;
+      box-sizing: content-box;
+  }
 
-.fc-toolbar h2 {
-    font-size: 1.7rem;
-    line-height: 30px;
-    margin: 0;
-    text-transform: uppercase;
+  .fc-event-inner{
+      position: relative;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+  }
+
+  .fc-state-highlight{
+      background-color: #f1ffed;
+  }
+
+  .fc-overlay{
+      display: none;
+      position: absolute;
+      min-width: 300px;
+      padding: 17px 0;
+      top: auto;
+      left: 50%;
+      margin-left: -150px;
+      z-index: 1000;
+  }
+
+  .fc-overlay.left{
+      left: 100%;
+      top: -15px;
+      padding: 0 10px;
+      margin: 0;
+  }
+  .fc-overlay.right{
+      left: auto;
+      right: 100%;
+      top: -15px;
+      padding: 0 10px;
+      margin: 0;
+  }
+
+  .fc-overlay .panel{
+      padding: 15px 20px;
+  }
+
+  .fc-overlay .pull-up{
+      top: 26px;
+  }
+
+  .fc-event:hover,
+  .fc-event:focus,
+  .fc-event:active{
+      z-index: 1000;
+  }
+  .fc-event:hover .fc-overlay,
+  .fc-event:focus .fc-overlay,
+  .fc-event:active .fc-overlay{
+      display: block;
+  }
+
+  .fc-time-grid-event{
+      overflow: visible;
+  }
+
+  .fc-time-grid .fc-event:hover{
+      z-index: 1000 !important;
+  }
+
+  .fc-time-grid-event .fc-time {
+      font-size: 1rem;
+      font-weight: normal;
+  }
+
+  .fc-time-grid-event > .fc-content {
+    position: relative;
+    z-index: 2;
+    font-size: 1.2rem;
     font-weight: 300;
-}
+  }
 
-.fc-view .fc-widget-header{
-    background-color: #fff;
-}
-
-.fc-row:hover,
-.fc-row:focus,
-.fc-row:active{
-    position: relative;
-    z-index: 1000;
-}
-
-.fc-view .fc-widget-header,
-.fc-view .fc-widget-content {
-    border-color: #e3eaef;
-    font-weight: normal;
-}
-
-.fc-view .fc-day-header{
-    padding: 4px 4px;
-}
-
-.fc-view .fc-event {
-    padding: 4px 8px;
-    box-shadow: 0 1px 0px rgba(0,0,0,0.05);
-    border-top: 0;
-    border-right: 0;
-    border-bottom: 0;
-    border-radius: 3px;
-    overflow: hidden;
-}
-
-.fc-view  .fc-event-hori{
-    padding: 4px 8px;
-}
-
-.fc-event {
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-}
-
-.fc-event-inner{
-    position: relative;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-
-.fc-state-highlight{
-    background-color: #f1ffed;
-}
-
-.fc-overlay{
-    display: none;
-    position: absolute;
-    min-width: 300px;
-    padding: 17px 0;
-    top: auto;
-    left: 50%;
-    margin-left: -150px;
-    z-index: 1000;
-}
-
-.fc-overlay.left{
-    left: 100%;
-    top: -15px;
-    padding: 0 10px;
-    margin: 0;
-}
-.fc-overlay.right{
-    left: auto;
-    right: 100%;
-    top: -15px;
-    padding: 0 10px;
-    margin: 0;
-}
-
-.fc-overlay .panel{
-    padding: 15px 20px;
-}
-
-.fc-overlay .pull-up{
-    top: 26px;
-}
-
-.fc-event:hover,
-.fc-event:focus,
-.fc-event:active{
-    z-index: 1000;
-}
-.fc-event:hover .fc-overlay,
-.fc-event:focus .fc-overlay,
-.fc-event:active .fc-overlay{
-    display: block;
-}
-
-.fc-time-grid-event{
-    overflow: visible;
-}
-
-.fc-time-grid .fc-event:hover{
-    z-index: 1000 !important;
-}
-
-.fc-time-grid-event .fc-time {
-    font-size: 1rem;
-    font-weight: normal;
-}
-
-.fc-time-grid-event > .fc-content {
-  position: relative;
-  z-index: 2;
-  font-size: 1.2rem;
-  font-weight: 300;
-}
-
-.fc-time-grid-event .fc-bg {
-    opacity: 0.5;
-}
+  .fc-time-grid-event .fc-bg {
+      opacity: 0.5;
+  }
 
 
-.fc-title::first-line {
-    font-weight: bold;
-    text-transform: uppercase;
-}
+  .fc-title::first-line {
+      font-weight: bold;
+      text-transform: uppercase;
+  }
 
 
-// Event colors
-.fc-event-purple {
-    background-color: rgb(134, 122, 206);
-    border-left: 3px solid rgb(134, 122, 206);
+  // Event colors
+  .fc-event-purple {
+      background-color: rgb(134, 122, 206);
+      border-left: 3px solid rgb(134, 122, 206);
 
-    .fc-content {
-        color: rgb(73, 61, 143);
-    }
-}
+      .fc-content {
+          color: rgb(73, 61, 143);
+      }
+  }
 
-.fc-time-grid-event .fc-resizer {
-  color: rgba(255, 255, 255, 0);
-}
+  .fc-time-grid-event .fc-resizer {
+    color: rgba(255, 255, 255, 0);
+  }
 
-.fc-event-green {
-    background-color: #27c27b;
-    border-left: 3px solid #27c24c;
+  .fc-event-green {
+      background-color: #27c27b;
+      border-left: 3px solid #27c24c;
 
-    .fc-content {
-        color: #17772E;
-    }
-}
+      .fc-content {
+          color: #17772E;
+      }
+  }
 
-.fc-event-black {
-  background-color: rgba(0, 0, 0, 1);
-  border-left: 3px solid rgba(255, 255, 255, 0.3);
-}
+  .fc-event-black {
+    background-color: rgba(0, 0, 0, 1);
+    border-left: 3px solid rgba(255, 255, 255, 0.3);
+  }
 
-.fc-event-cyan {
-    background-color: #23b7e5;
-    border-left: 3px solid #23b7e5;
+  .fc-event-cyan {
+      background-color: #23b7e5;
+      border-left: 3px solid #23b7e5;
 
-    .fc-content {
-        color: #116D8A;
-    }
-}
+      .fc-content {
+          color: #116D8A;
+      }
+  }
 
-.fc-event-red {
-    background-color: #f05050;
-    border-left: 3px solid #f05050;
+  .fc-event-red {
+      background-color: #f05050;
+      border-left: 3px solid #f05050;
 
-    .fc-content {
-        color: #881616;
-    }
-}
+      .fc-content {
+          color: #881616;
+      }
+  }
 
-.fc-event-orange {
-    background-color: #f39c31;
-    border-left: 3px solid #f39c31;
+  .fc-event-orange {
+      background-color: #f39c31;
+      border-left: 3px solid #f39c31;
 
-    .fc-content {
-        color: #A3661B;
-    }
-}
+      .fc-content {
+          color: #A3661B;
+      }
+  }
 
-// Event colors in top bar
-.fc-day-grid {
+  // Event colors in top bar
+  .fc-day-grid {
 
-    .fc-event-purple {
-        background-color: rgba(134, 122, 206, 0.5);
-    }
+      .fc-event-purple {
+          background-color: rgba(134, 122, 206, 0.5);
+      }
 
-    .fc-event-green {
-        background-color: rgba(39, 194, 76, 0.5);
-    }
+      .fc-event-green {
+          background-color: rgba(39, 194, 76, 0.5);
+      }
 
-    .fc-event-cyan {
-        background-color: rgba(35, 183, 229, 0.5);
-    }
+      .fc-event-cyan {
+          background-color: rgba(35, 183, 229, 0.5);
+      }
 
-    .fc-event-red {
-        background-color: rgba(240, 80, 80, 0.5);
-    }
+      .fc-event-red {
+          background-color: rgba(240, 80, 80, 0.5);
+      }
 
-    .fc-event-orange {
-        background-color: rgba(243, 156, 49, 0.5);
-    }
-}
+      .fc-event-orange {
+          background-color: rgba(243, 156, 49, 0.5);
+      }
+  }
+
+  .kalinox {
+    width: 14px;
+    vertical-align: middle;
+    fill: rgba(255, 255, 255, 0.7);
+    display:none;
+  }
 }

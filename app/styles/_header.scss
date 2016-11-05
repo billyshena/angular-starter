@@ -31,3 +31,21 @@
   border-radius: 30px;
   font-size: 1.2rem;
 }
+
+.avatar-container {
+  margin:18px 30px;
+  a{
+    color: rgba(0, 0, 0, 0.7);
+    font-size:1.4rem;
+    font-weight: 600;
+  }
+  float:right;
+}
+.avatar {
+  margin-right: 5px;
+  margin-top: -7px;
+  width: 2.2pc;
+  height: 2.2pc;
+  border-radius: 100%;
+  vertical-align: middle;
+}

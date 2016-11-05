@@ -9,5 +9,5 @@
  */
 angular.module('airliquideApp')
   .controller('HomeCtrl', function ($scope, $state) {
-    console.log('HomeCtrl');
+    return $state.go('app.agenda');
 });

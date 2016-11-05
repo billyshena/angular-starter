@@ -25,6 +25,7 @@ $nav-white-hover: rgba(255, 255, 255, 1);
   padding-left: 10px;
   margin-top:40px;
   li {
+    margin-top:10px;
     &:hover {
       border-top-left-radius: 3px;
       border-bottom-left-radius: 3px;
@@ -45,15 +46,17 @@ $nav-white-hover: rgba(255, 255, 255, 1);
       line-height: 18px;
       font-weight: 300;
       display: block;
-      padding: 12px 10px;
-      font-size: 1.5rem;
-      border-radius:3px;
+      padding: 12px 12px;
+      font-size: 2rem;
+      border-radius:4px;
 
       svg{
         vertical-align: middle;
-        margin-top: -4px;
+        margin-top: -6px;
         margin-right: 2px;
         fill: $nav-white;
+        width: 22px;
+        height: 22px;
       }
     }
   }
