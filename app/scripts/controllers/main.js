@@ -14,12 +14,12 @@ angular.module('airliquideApp')
     $scope.menu = [
       {
         id: 1,
-        title: "Avis client",
+        title: "Historique",
         active: true
       },
       {
         id: 2,
-        title: 'Historique'
+        title: 'Avis client'
       }
     ];
     $scope.feedbacks = [
@@ -80,8 +80,8 @@ angular.module('airliquideApp')
         ]
       }
     ];
-    $scope.isFeedback = true;
-    $scope.isHistory = false;
+    $scope.isFeedback = false;
+    $scope.isHistory = true;
 
     $scope.switch = function(item) {
       console.log('item', item);
@@ -89,7 +89,7 @@ angular.module('airliquideApp')
         item.active = false;
       });
       item.active = true;
-      if(item.id === 1) {
+      if(item.id === 2) {
         $scope.isFeedback = true;
         $scope.isHistory = false;
       }
