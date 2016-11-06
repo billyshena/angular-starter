@@ -24,7 +24,7 @@ angular.module('airliquideApp')
       {
         name: "Bill Gates",
         avatar: "http://blogs-images.forbes.com/mfonobongnsehe/files/2014/09/bill-gates.jpg",
-        content: "Mes dents brillent plus que le soleil",
+        content: "Je souhaite acheter votre cabinet",
         stars: [
           { id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }
         ],
