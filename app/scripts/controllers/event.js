@@ -24,6 +24,8 @@ angular.module('airliquideApp')
       { label: 'Devis prothèse' },
       { label: 'Devis implant(s)' }
     ];
+    $scope.sms = false;
+    $scope.kalinox = false;
 
     $scope.add = function() {
       $scope.patient.pathology = $scope.pathology;
@@ -32,6 +34,13 @@ angular.module('airliquideApp')
 
     $scope.close = function() {
       $uibModalInstance.dismiss();
+    }
+
+
+    $scope.setAllergies = function() {
+      $scope.allergies = "Lidocaïne";
+      $scope.sms = true;
+      $scope.kalinox = true;
     }
 
     function loadPatients() {

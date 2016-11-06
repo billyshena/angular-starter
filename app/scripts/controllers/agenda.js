@@ -27,7 +27,7 @@ angular.module('airliquideApp')
       {id: 5, title: 'Amélie Schwartz', start: new Date(y, m, d - 2, 11, 0), allDay: false, color: "fc-event-cyan" },
       {id: 6, title: 'Anthony Certeux', start: new Date(y, m, d - 3, 8, 0), allDay: false, color: "fc-event-red" },
       {id: 7, title: 'Lucie Schneider', start: new Date(y, m, d - 4, 14, 0), end: new Date(y, m, d - 4, 18, 0), allDay: false, color: "fc-event-orange" },
-      {id: 8, title: 'Marc Ober', start: new Date(y, m, d - 6, 10, 0), allDay: false, color: "fc-event-green" },
+      {id: 8, title: 'Emilia Clarke', start: new Date(y, m, d - 6, 10, 0), allDay: false, color: "fc-event-green" },
       {id: 9, title: 'Antoine Chrétien', start: new Date(y, m, d - 1, 10, 0), end: new Date(y, m, d - 1, 14, 0), allDay: false, color: "fc-event-black" },
       {id: 10, title: 'Léa Altabal', start: new Date(y, m, d - 6, 18, 0), end: new Date(y, m, d - 6, 20, 0), allDay: false, color: "fc-event-cyan" },
       {id: 11, title: 'Stéphane Padowski', start: new Date(y, m, d - 5, 9, 0), end: new Date(y, m, d-5, 12, 0), allDay: false, color: "fc-event-red" }

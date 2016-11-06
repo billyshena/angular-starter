@@ -58,7 +58,9 @@ angular.module('airliquideApp')
      },
 
      title: {
-         text: 'Consommation totale Kalinox'
+         text: 'Patientèle',
+         margin: 50,
+         style: { "color": "rgba(0, 0, 0, 0.6)", "fontSize": "24px"}
      },
 
      xAxis: {
@@ -71,14 +73,14 @@ angular.module('airliquideApp')
          max: 100,
          tickInterval: 100,
          title: {
-             text: 'Pourcentage patient'
+             text: 'En %'
          }
      },
 
      tooltip: {
          formatter: function () {
              return '<b>' + this.x + '</b><br/>' +
-                 this.series.name + ': ' + this.y + '<br/>';
+                 this.series.name + ': ' + this.y + '%<br/>';
          }
      },
 
@@ -97,7 +99,8 @@ angular.module('airliquideApp')
      },
      {
        name: 'Kalinox',
-       data: [3, 10, 40]
+       data: [3, 10, 40],
+       color: "rgba(0, 0, 0, 0.1)"
      }
    ]
  });

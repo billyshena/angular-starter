@@ -4,9 +4,13 @@
   </div>
   <form action="javascript:;" data-ng-submit="add()">
     <div class="modal-body">
+      <div class="form-group">
+        <label for="">Date</label>
+        <p style="margin-top:0;font-size:1.8rem;font-weight:500;color:rgba(0, 0, 0, 0.75);"><span style="font-weight: 500;">03/12/2016</span> de 8:00 à 10:00</p>
+      </div>
       <div class="form-group add-patient">
         <label for="group_name" class="ng-binding">Nom du patient</label>
-        <ui-select ng-model="patient.selected" theme="select2" ng-disabled="ctrl.disabled" title="Sélectionnez un patient">
+        <ui-select on-select="setAllergies()" ng-model="patient.selected" theme="select2" ng-disabled="ctrl.disabled" title="Sélectionnez un patient">
           <ui-select-match placeholder="Recherchez un patient...">{{$select.selected.name}}</ui-select-match>
           <ui-select-choices repeat="person in patients | propsFilter: {name: $select.search, age: $select.search}">
             <div ng-bind-html="person.name | highlight: $select.search"></div>
@@ -27,22 +31,26 @@
       </div>
       <div class="form-group">
         <label>Allergies</label>
-        <textarea class="select-form" name="" id="" rows="3"></textarea>
+        <textarea class="select-form" name="" id="" rows="3" data-ng-model="allergies"></textarea>
       </div>
       <div class="form-group">
         <label for="group_name" class="ng-binding">Options</label>
         <div class="options">
           <input type="checkbox"
-                 ng-checked="true"
+                 ng-checked="sms"
                  placeholder="Rechercher..."
                  data-ng-model="patient.hasKalinox">
            <span style="font-weight: 500; color: rgba(0, 0, 0, 0.8)">Rappel par sms</span>
         </div>
         <div class="options">
           <input type="checkbox"
+                 ng-checked="kalinox"
                  placeholder="Rechercher..."
                  data-ng-model="patient.hasKalinox">
            <span style="font-weight: 500; color: rgba(0, 0, 0, 0.8)">Ce patient souhaite utiliser un anti-douleur</span>
+        </div>
+        <div class="options">
+          <p style="margin-top:0;margin-left:23px;color:rgba(0, 0, 0, 0.4);font-weight:400;font-size:1.4rem;" data-ng-show="sms">(Dernière visite: oui)</p>
         </div>
       </div>
     </div>
