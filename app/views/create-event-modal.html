@@ -33,12 +33,20 @@
         <label for="group_name" class="ng-binding">Options</label>
         <div class="options">
           <input type="checkbox"
+                 ng-checked="true"
+                 placeholder="Rechercher..."
+                 data-ng-model="patient.hasKalinox">
+           <span style="font-weight: 500; color: rgba(0, 0, 0, 0.8)">Rappel par sms</span>
+        </div>
+        <div class="options">
+          <input type="checkbox"
                  placeholder="Rechercher..."
                  data-ng-model="patient.hasKalinox">
            <span style="font-weight: 500; color: rgba(0, 0, 0, 0.8)">Ce patient souhaite utiliser un anti-douleur</span>
         </div>
       </div>
     </div>
+    <br>
     <div class="modal-footer">
       <p class="text-center">
           <button class="btn btn-success ng-binding" type="submit">Ajouter</button>

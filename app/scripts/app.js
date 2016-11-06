@@ -66,6 +66,15 @@ angular
             templateUrl: 'views/agenda.html'
           }
         }
+      })
+      .state('app.stats', {
+        url: '/statistiques',
+        views: {
+          'theContent@': {
+            controller: 'StatsCtrl',
+            templateUrl: 'views/stats.html'
+          }
+        }
       });
 
   });
