@@ -58,9 +58,10 @@ $radius: 5px;
       line-height: 18px;
       font-weight: 300;
       display: block;
-      padding: 12px 12px;
+      padding: 15px 12px;
       font-size: 2rem;
-      border-radius:$radius;
+      border-top-left-radius:$radius;
+      border-bottom-left-radius: $radius;
 
       svg{
         vertical-align: middle;
