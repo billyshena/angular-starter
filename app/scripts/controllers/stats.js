@@ -15,37 +15,38 @@ angular.module('airliquideApp')
       {
         name: "Mark Zuckeberg",
         avatar: "http://blogs.timesofindia.indiatimes.com/wp-content/uploads/2015/12/mark-zuckerberg.jpg",
+        content: "Résultat meilleur que freedent !",
         stars: [
           { id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }
-        ]
+        ],
+        time: '3h'
       },
       {
-        name: "Mark Zuckeberg",
-        avatar: "http://blogs.timesofindia.indiatimes.com/wp-content/uploads/2015/12/mark-zuckerberg.jpg",
+        name: "Bill Gates",
+        avatar: "http://blogs-images.forbes.com/mfonobongnsehe/files/2014/09/bill-gates.jpg",
+        content: "Mes dents brillent plus que le soleil",
         stars: [
           { id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }
-        ]
+        ],
+        time: '7h'
       },
       {
-        name: "Mark Zuckeberg",
-        avatar: "http://blogs.timesofindia.indiatimes.com/wp-content/uploads/2015/12/mark-zuckerberg.jpg",
+        name: "Donald Trump",
+        avatar: "http://rightweb.irc-online.org/wp-content/uploads/2016/03/donald-trump.jpg",
+        content: "I didn't enjoy that, sorry.",
         stars: [
-          { id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }
-        ]
+          { id: 1 }, { id: 2 }, { id: 3, disable: true }, { id: 4, disable: true }, { id: 5, disable: true }
+        ],
+        time: '10h'
       },
       {
-        name: "Mark Zuckeberg",
-        avatar: "http://blogs.timesofindia.indiatimes.com/wp-content/uploads/2015/12/mark-zuckerberg.jpg",
+        name: "François Hollande",
+        avatar: "http://institutdeslibertes.org/wp-content/uploads/2015/09/french-president-francois-hollande-might-give-up.jpg",
+        content: "Bien moins cher que mon coiffeur",
         stars: [
           { id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }
-        ]
-      },
-      {
-        name: "Mark Zuckeberg",
-        avatar: "http://blogs.timesofindia.indiatimes.com/wp-content/uploads/2015/12/mark-zuckerberg.jpg",
-        stars: [
-          { id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }
-        ]
+        ],
+        time: '18h'
       }
     ];
 

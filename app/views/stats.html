@@ -34,13 +34,14 @@
 
 
     <div class="reviews">
-      <ul>
+      <ul style="padding-right: 65px;padding-left:35px;">
         <li data-ng-repeat="r in reviews">
           <p class="review">
-            <span class="zuckeberg"></span>
-            Mark Zuckeberg
-            <span class="time">3h</span>
+            <span class="zuckeberg" ng-style="{'background-image':'url({{ r.avatar }})'}"></span>
+            {{ r.name }}
+            <span class="time">{{ r.time }}</span>
           </p>
+          <span>{{ r.content }}</span><br>
           <span data-ng-repeat="i in r.stars" class="star">
             <svg class="star-active" data-ng-class="{'star-disable': i.disable }"width="19px" height="18px" viewBox="0 0 19 18">
                 <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
